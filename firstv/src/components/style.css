@@ -1,0 +1,110 @@
+#container{
+    margin-top: 5%;
+    margin-left: 40%;
+    margin-right: 30%;
+	font-family: Segoe UI;
+	font-weight: bold;
+}
+
+#d1,#d3{
+  background-color: #224EC8;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+}
+
+#d1 {
+    margin-bottom: 15px;
+}
+
+#d1 table {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#d1 td, #d1 tr {
+    padding-right: 20px;
+}
+
+
+.links {
+    padding-right: 10px;
+}
+
+#d1 hr {
+    margin: 0 30px;
+}
+
+#d2{
+	background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
+	text-align: center;
+    border-radius: 15px;
+    height: 145px;
+    width: 100%;
+}
+#d1 h3,h4{
+    text-align: left;
+    margin-left: 8px;
+}
+td{
+    margin-left: 100px;
+}
+
+#clear {
+    clear: both;
+}
+
+#d2sContainer {
+    margin: 0 auto;
+    position: relative;
+}
+
+.d2s * {
+    margin: 0 auto;
+}
+
+.d2s {
+    margin: 5px 10px;
+    float: left;
+    border: 2px solid black;
+    background-color: #cfd6ed;
+    height: 95px;
+    width: 45px;
+    border-radius: 15px;
+    padding: 13px 15px;
+
+}
+
+
+.weatherIconDiv {
+	width: 300px;
+	height: auto;
+}
+
+.weatherIconDiv img {
+    width: 30%;
+    height: auto;
+}
+
+table,td,tr{
+	text-align: center;
+}
+
+#Postdiv{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 15%;
+    margin-left: 35%;
+    
+
+}
+
+fieldset{
+    width: 25em;
+    height: 5em;
+    border-style: double;
+    border-color: black;
+}
+label,input{
+    margin-left: 25%;
+    margin-top: 5%;
+}
