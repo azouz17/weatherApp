@@ -1,9 +1,10 @@
 #container{
-    margin-top: 5%;
-    margin-left: 40%;
-    margin-right: 30%;
+    margin-top: 0%;
+    margin-left: 41%;
+    margin-right: 41%;
 	font-family: Segoe UI;
 	font-weight: bold;
+    border: 2px solid black;
 }
 
 #d1,#d3{
@@ -11,6 +12,7 @@
   text-align: center;
   color: white;
   border-radius: 15px;
+  margin: 0 5px;
 }
 
 #d1 {
@@ -41,6 +43,7 @@
     border-radius: 15px;
     height: 145px;
     width: 100%;
+    margin: 0 5px;
 }
 #d1 h3,h4{
     text-align: left;

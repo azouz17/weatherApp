@@ -55,7 +55,7 @@ export class Mainpage extends React.Component
       this.setState({humidity: data.main.humidity});
       this.setState({windSpeed: data.wind.speed});
 
-      this.setState({weatherIcon: ("http://openweathermap.org/img/w/" + data.weather[0].icon + ".png")});
+      this.setState({weatherIcon: ("http://openweathermap.org/img/wn/" + data.weather[0].icon + "@2x.png")});
       this.setState({weatherDesc: data.weather[0].main});
       this.setState({feelsLikeTemp: Math.round(data.main.feels_like-273.15)}); // IN CELSIUS
       this.setState({highTemp: Math.round(data.main.temp_max-273.15)}); // IN CELSIUS
