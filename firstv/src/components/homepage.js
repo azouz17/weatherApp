@@ -93,8 +93,9 @@ export class Mainpage extends React.Component
 				<Link to="Postcode" className='links'>Postcode</Link>
                 <button onClick={this.handleClick.bind(this)}>Celsius/Fahrenheit</button>
                 <br></br>
+
                 <div id="d1">
-                    <h3> {this.state.loading ? <h3>Loading...</h3> : <h3>{this.state.city}, {this.state.country}</h3>}</h3>
+                    <h3 id="cityheader"> {this.state.loading ? <h3>Loading...</h3> : <h3>{this.state.city}, {this.state.country}</h3>}</h3>
                     <h4>{this.state.date}</h4>
                     <table>
                         <tr>
@@ -110,7 +111,7 @@ export class Mainpage extends React.Component
                     </table>
                     <br></br>
                     <hr />
-                    <table>
+                    <table id="d1otherinfo">
                         <tr>
                             <td>Humidity</td>
                             <td>Wind speed</td>
@@ -128,11 +129,11 @@ export class Mainpage extends React.Component
                 
                 <div id="d2">
                     <div id="d2sContainer">
-                        <div className='d2s'><h3>Day1</h3><img src='http://openweathermap.org/img/w/01n.png'></img> <h3>Space</h3></div>
-                        <div className='d2s'><h3>Day2</h3><img src='http://openweathermap.org/img/w/01n.png'></img> <h3>Space</h3></div>
-                        <div className='d2s'><h3>Day3</h3><img src='http://openweathermap.org/img/w/01n.png'></img> <h3>Space</h3></div>
-                        <div className='d2s'><h3>Day4</h3><img src='http://openweathermap.org/img/w/01n.png'></img> <h3>Space</h3></div>
-                        <div className='d2s'><h3>Day5</h3><img src='http://openweathermap.org/img/w/01n.png'></img> <h3>Space</h3></div>
+                        <div className='d2s'><h4>Day1</h4><img src='http://openweathermap.org/img/w/01n.png'></img> <h4>Space</h4></div>
+                        <div className='d2s'><h4>Day2</h4><img src='http://openweathermap.org/img/w/01n.png'></img> <h4>Space</h4></div>
+                        <div className='d2s'><h4>Day3</h4><img src='http://openweathermap.org/img/w/01n.png'></img> <h4>Space</h4></div>
+                        <div className='d2s'><h4>Day4</h4><img src='http://openweathermap.org/img/w/01n.png'></img> <h4>Space</h4></div>
+                        <div className='d2s'><h4>Day5</h4><img src='http://openweathermap.org/img/w/01n.png'></img> <h4>Space</h4></div>
                     </div>
                 </div>
 
