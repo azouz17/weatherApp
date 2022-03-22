@@ -1,10 +1,10 @@
 #container{
-    margin-top: 0%;
-    margin-left: 41%;
-    margin-right: 41%;
+    margin: 0 auto;
 	font-family: Segoe UI;
 	font-weight: bold;
     border: 2px solid black;
+    width: 454px;
+    height: 825px;
 }
 
 #d1,#d3{
