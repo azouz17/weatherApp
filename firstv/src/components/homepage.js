@@ -1,18 +1,14 @@
 import  React from 'react';
-import baseball from'../Icons/baseball.png';
-import basketball from'../Icons/basketball.png';
-import beachvolley from'../Icons/beachvolley.png';
-import icehokey from'../Icons/icehokey.png';
-import soccer from'../Icons/soccer.png';
-import rowing from'../Icons/rowing.png';
-import tennis from'../Icons/tennis.png';
-import sailing from'../Icons/sailing.png';
-import skiing from'../Icons/skiing.png';
-import tabletennis from'../Icons/tabletennis.png';
-import volleyball from'../Icons/volleyball.png';
-import weightlifting from'../Icons/weightlifting.png';
-import yachting from'../Icons/yachting.png';
-import snowboarding from'../Icons/snowboarding.png';
+import cycling from '../Icons/new icons/cycling.png';
+import hiking from '../Icons/new icons/hiking.png';
+import indoorrunning from '../Icons/new icons/indoorrunning.png';
+import marathoning from '../Icons/new icons/marathoning.png';
+import mountain from '../Icons/new icons/mountain.png';
+import running from '../Icons/new icons/running.png';
+import skateboarding from '../Icons/new icons/skateboarding.png';
+import skiing from '../Icons/new icons/skiing.png';
+import weight from '../Icons/new icons/weight.png';
+
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -81,32 +77,25 @@ export class Mainpage extends React.Component
       this.setState({feelsLikeTempF: Math.round((data.main.feels_like*1.8)-459.67)}); // IN FAHRENHEIT
       this.setState({highTempF: Math.round((data.main.temp_max*1.8)-459.67)}); // IN FAHRENHEIT
       this.setState({lowTempF: Math.round((data.main.temp_min*1.8)-459.67)}); // IN FAHRENHEIT
-      this.setState({sport1: baseball});
-      this.setState({sport2: volleyball});
-      this.setState({sport3: tabletennis});
-      if(data.main.feels_like>303.15 && data.main.feels_like<313.15)
+      
+      
+     if(data.main.feels_like>293.15 && data.main.feels_like<303.15)
       {
-         this.setState({sport1: beachvolley});
-         this.setState({sport2: yachting});
-         this.setState({sport3: sailing});
-      }
-      else if(data.main.feels_like>293.15 && data.main.feels_like<303.15)
-      {
-         this.setState({sport1: soccer});
-         this.setState({sport2: rowing});
-         this.setState({sport3: basketball});
+         this.setState({sport1: marathoning});
+         this.setState({sport2: hiking});
+         this.setState({sport3: cycling});
       }
       else if(data.main.feels_like>278.15 && data.main.feels_like<293.15)
       {
-         this.setState({sport1: weightlifting});
-         this.setState({sport2: tennis});
-         this.setState({sport3: basketball});
+         this.setState({sport1: weight});
+         this.setState({sport2: skateboarding});
+         this.setState({sport3: running});
       }
       else if(data.main.feels_like>268.15 && data.main.feels_like<278.15)
       {
-         this.setState({sport1: icehokey});
+         this.setState({sport1: indoorrunning});
          this.setState({sport2: skiing});
-         this.setState({sport3: snowboarding});
+         this.setState({sport3: indoorrunning});
       }
 
       console.log(data);
@@ -164,7 +153,7 @@ export class Mainpage extends React.Component
                         <tr>
                             <td>{this.state.loading ? <td>Data</td> : <td>{this.state.humidity}%</td>}</td>
                             <td>{this.state.loading ? <td>Data</td> : <td>{this.state.windSpeed}km</td>}</td>
-							<td id='hilotemps'>{this.state.loading ? <td>Data</td> : <td>{this.state.highTemp}° / {this.state.lowTemp}°</td>}</td>
+							<td id='hilotemps'>{this.state.loading ? <td>Data</td> : this.state.celsiusOn ? <td>{this.state.highTemp}° / {this.state.lowTemp}° </td> : <td> {this.state.highTempF}° / {this.state.lowTempF}° </td> }</td>
 							<td>{this.state.loading ? <td>Data</td> : <td>{this.state.visibility}m</td>}</td>
                         </tr>
                     </table>
