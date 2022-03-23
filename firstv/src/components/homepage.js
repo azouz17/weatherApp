@@ -1,4 +1,18 @@
 import  React from 'react';
+import baseball from'../Icons/baseball.png';
+import basketball from'../Icons/basketball.png';
+import beachvolley from'../Icons/beachvolley.png';
+import icehokey from'../Icons/icehokey.png';
+import soccer from'../Icons/soccer.png';
+import rowing from'../Icons/rowing.png';
+import tennis from'../Icons/tennis.png';
+import sailing from'../Icons/sailing.png';
+import skiing from'../Icons/skiing.png';
+import tabletennis from'../Icons/tabletennis.png';
+import volleyball from'../Icons/volleyball.png';
+import weightlifting from'../Icons/weightlifting.png';
+import yachting from'../Icons/yachting.png';
+import snowboarding from'../Icons/snowboarding.png';
 import {
 	BrowserRouter as Router,
 	Routes,
@@ -26,6 +40,9 @@ export class Mainpage extends React.Component
           humidity: null,
           windSpeed: null,
           windDirection: null,
+          sport1 :null,
+          sport2 :null,
+          sport3 :null,
 
           weatherIcon: null,
           weatherDesc: null,
@@ -64,7 +81,33 @@ export class Mainpage extends React.Component
       this.setState({feelsLikeTempF: Math.round((data.main.feels_like*1.8)-459.67)}); // IN FAHRENHEIT
       this.setState({highTempF: Math.round((data.main.temp_max*1.8)-459.67)}); // IN FAHRENHEIT
       this.setState({lowTempF: Math.round((data.main.temp_min*1.8)-459.67)}); // IN FAHRENHEIT
-
+      this.setState({sport1: baseball});
+      this.setState({sport2: volleyball});
+      this.setState({sport3: tabletennis});
+      if(data.main.feels_like>303.15 && data.main.feels_like<313.15)
+      {
+         this.setState({sport1: beachvolley});
+         this.setState({sport2: yachting});
+         this.setState({sport3: sailing});
+      }
+      else if(data.main.feels_like>293.15 && data.main.feels_like<303.15)
+      {
+         this.setState({sport1: soccer});
+         this.setState({sport2: rowing});
+         this.setState({sport3: basketball});
+      }
+      else if(data.main.feels_like>278.15 && data.main.feels_like<293.15)
+      {
+         this.setState({sport1: weightlifting});
+         this.setState({sport2: tennis});
+         this.setState({sport3: basketball});
+      }
+      else if(data.main.feels_like>268.15 && data.main.feels_like<278.15)
+      {
+         this.setState({sport1: icehokey});
+         this.setState({sport2: skiing});
+         this.setState({sport3: snowboarding});
+      }
 
       console.log(data);
       console.log("Weather icon:", this.state.weatherIcon);
@@ -106,7 +149,7 @@ export class Mainpage extends React.Component
                         </tr>
                         <tr>
                             <td>{this.state.weatherDesc}</td> 
-                            <td id='maintemp'> {this.state.loading ? <td>Data</td> : <td>{this.state.feelsLikeTemp}° </td>} {this.state.celsiusOn ? <td>Celsius</td> : <td>Fahrenheit</td>}</td>
+                            <td id='maintemp'> {this.state.loading ? <td>Data</td> : this.state.celsiusOn ? <td>{this.state.feelsLikeTemp}°</td> : <td> {this.state.feelsLikeTempF}° </td>} {this.state.celsiusOn ? <td>Celsius</td> : <td>Fahrenheit</td>}</td>
                         </tr>
                     </table>
                     <br></br>
@@ -141,7 +184,13 @@ export class Mainpage extends React.Component
 
 				<div id="d3">
                     <h3>Perfect weather for:</h3>
-					<h3>Placeholder Placeholder Placeholder</h3>
+					<table>
+                        <tr>
+                           <td id="perfect"><img src={this.state.sport1} width={75} height={75} alt="No sports recommended"></img></td> 
+                           <td id="perfect"><img src={this.state.sport2} width={75} height={75} alt="No sports recommended"></img></td>
+                           <td id="perfect"><img src={this.state.sport3} width={75} height={75} alt="No sports recommended"></img></td>
+                        </tr>
+                    </table>
 					</div>
 				</div>
         );
