@@ -1,4 +1,7 @@
 #container{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     margin: 0 auto;
 	font-family: Segoe UI;
 	font-weight: bold;
@@ -6,6 +9,118 @@
     width: 454px;
     height: 825px;
 }
+
+.MainInfo  {
+    background-color: #224ec8;
+    border-radius: 5% ;
+    color: white ;
+    padding: 2%;
+    margin-bottom: 5%;
+
+
+
+}
+
+.Location {
+    position: relative;
+}
+
+#locationCity {
+    position: relative;
+    text-align: left;
+    padding-left: 10%;
+    font-size: 140%;
+    padding-bottom: 0%;
+    margin-bottom: 0%;
+    bottom: 0%;
+
+    
+}
+
+#locationTime {
+    position: absolute;
+    top: 40%;
+    padding-bottom: 10%;
+    text-align: left;
+    padding-left: 15%;
+    font-size: 100%;
+    
+    
+}
+
+
+#maintemp  {
+    display: inline-block;
+    font-size: 100%;
+}
+
+
+.weatherIcon {
+    display: inline-block;
+    position: relative;
+	width: 100%;
+	height: auto;
+}
+
+#iconDescription img {
+    filter: brightness(0) invert(1);
+    padding-right: 15em;
+    width: 30%;
+    height: auto;
+    margin-bottom: 0.4em;
+
+
+}
+#weather-caption {
+    bottom: 2em;
+    right: 7em;
+    position: relative;
+
+}
+
+#maintemp {
+    font-size: 4em;
+    position: absolute;
+    bottom: 0.5em;
+    font-size: 2.5em;
+}
+
+
+#hilotemp span {
+    font-size: 0.7em;
+    position: absolute;
+    bottom: 2.5em;
+    
+}
+#hilotemp  {
+   right: 4em;
+    
+}
+
+#maintemp span {
+    font-size: 1.5em;
+    display: inline-flex;
+}
+
+.WeatherData{
+    width: 80%;
+    margin-left: 2em;
+
+}
+
+.data {
+    font-size: 1em;
+    
+}
+.attribute td {
+    font-size: 0.6em;
+}
+
+.attribute td {
+    font-size: 0.6em;
+}
+
+
 
 #d1,#d3{
   background-color: #224EC8;
@@ -85,15 +200,7 @@ td{
 }
 
 
-.weatherIconDiv {
-	width: 300px;
-	height: auto;
-}
 
-.weatherIconDiv img {
-    width: 30%;
-    height: auto;
-}
 
 table,td,tr{
 	text-align: center;
@@ -120,3 +227,11 @@ label,input{
 #perfect{
     padding-left: 50px;
 }
+
+hr {
+    position: relative;
+    bottom: 1.5em;
+    width:86%;
+    margin:0 auto;
+}
+

@@ -125,39 +125,42 @@ export class Mainpage extends React.Component
 				<Link to="Postcode" className='links'>Postcode</Link>
                 <button onClick={this.handleClick.bind(this)}>Celsius/Fahrenheit</button>
                 <br></br>
-
-                <div id="d1">
-                    <h3 id="cityheader"> {this.state.loading ? <h3>Loading...</h3> : <h3>{this.state.city}, {this.state.country}</h3>}</h3>
-                    <h4>{this.state.date}</h4>
-                    <table>
-                        <tr>
-						<div class="weatherIconDiv">
-                            <img src={this.state.weatherIcon} alt="weather icon"/>
-						</div>
-                            <td>Temperature</td>
-                        </tr>
-                        <tr>
-                            <td>{this.state.weatherDesc}</td> 
-                            <td id='maintemp'> {this.state.loading ? <td>Data</td> : this.state.celsiusOn ? <td>{this.state.feelsLikeTemp}°</td> : <td> {this.state.feelsLikeTempF}° </td>} {this.state.celsiusOn ? <td>Celsius</td> : <td>Fahrenheit</td>}</td>
-                        </tr>
-                    </table>
+                <div class = "MainInfo">
+                    <div class="Location">
+                        <h3 id = "locationCity"> {this.state.loading ? <h3>Loading...</h3> : <h3>{this.state.city}, {this.state.country}</h3>}</h3>
+                        <h4 id = "locationTime">{this.state.date}</h4>
+                    </div>
+                    
+                    <div class="weatherIcon">
+                        <figure id="iconDescription">
+                            <img src={this.state.weatherIcon} alt="weather icon"/> 
+                            <figcaption id="weather-caption">{this.state.weatherDesc} </figcaption>
+                        </figure>
+                        <div>
+                           <h2 id="maintemp"> {this.state.loading ? <h2>Data</h2> : <span>{this.state.feelsLikeTemp}° </span>} {this.state.celsiusOn ? <span>C</span> : <span>F</span>}</h2> 
+                        </div>
+                        <div>
+                        <h2 id='hilotemp'>{this.state.loading ? <span>Data</span> : <span>{this.state.lowTemp}° / {this.state.highTemp}°</span>}</h2> 
+                        </div>
+                    </div>    
                     <br></br>
                     <hr />
-                    <table id="d1otherinfo">
-                        <tr>
+                    <table class="WeatherData">
+                       
+                        <tr class = "data">
+                            <td>{this.state.loading ? <td>Data</td> : <td>{this.state.humidity}%</td>}</td>
+                            <td>{this.state.loading ? <td>Data</td> : <td>{this.state.windSpeed}km</td>}</td>
+							<td id='hilotemps'>{this.state.loading ? <td>Data</td> : <td>{this.state.highTemp}° / {this.state.lowTemp}°</td>}</td>
+							<td>{this.state.loading ? <td>Data</td> : <td>{this.state.visibility}m</td>}</td>
+                        </tr> 
+                        <tr class = "attribute">
                             <td>Humidity</td>
                             <td>Wind speed</td>
 							<td>Hi/Lo Temp</td>
 							<td>Visibility</td>
                         </tr>
-                        <tr>
-                            <td>{this.state.loading ? <td>Data</td> : <td>{this.state.humidity}%</td>}</td>
-                            <td>{this.state.loading ? <td>Data</td> : <td>{this.state.windSpeed}km</td>}</td>
-							<td id='hilotemps'>{this.state.loading ? <td>Data</td> : this.state.celsiusOn ? <td>{this.state.highTemp}° / {this.state.lowTemp}° </td> : <td> {this.state.highTempF}° / {this.state.lowTempF}° </td> }</td>
-							<td>{this.state.loading ? <td>Data</td> : <td>{this.state.visibility}m</td>}</td>
-                        </tr>
                     </table>
-                    </div>
+                </div>
                 
                 <div id="d2">
                     <div id="d2sContainer">
