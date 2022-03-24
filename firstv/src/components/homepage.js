@@ -233,10 +233,10 @@ export class Mainpage extends React.Component
                             <figcaption id="weather-caption">{this.state.weatherDesc} </figcaption>
                         </figure>
                         <div>
-                           <h2 id="maintemp"> {this.state.loading ? <h2>Data</h2> : <span>{this.state.feelsLikeTemp}° </span>} {this.state.celsiusOn ? <span>C</span> : <span>F</span>}</h2> 
+                           <h2 id="maintemp"> {this.state.loading ? <h2>Data</h2> : this.state.celsiusOn ? <span>{this.state.feelsLikeTemp}°</span>: <span> {this.state.feelsLikeTempF} </span>} {this.state.celsiusOn ? <span>C</span> : <span>F</span>}</h2> 
                         </div>
                         <div>
-                        <h2 id='hilotemp'>{this.state.loading ? <span>Data</span> : <span>{this.state.lowTemp}° / {this.state.highTemp}°</span>}</h2> 
+                        <h2 id='hilotemp'>{this.state.loading ? <span>Data</span> : this.state.celsiusOn ? <span>{this.state.highTemp}° / {this.state.lowTemp} </span>: <span>{this.state.highTempF}° / {this.state.lowTempF} °</span>}</h2> 
                         </div>
                     </div>    
                     <br></br>
@@ -246,7 +246,7 @@ export class Mainpage extends React.Component
                         <tr class = "data">
                             <td>{this.state.loading ? <td>Data</td> : <td>{this.state.humidity}%</td>}</td>
                             <td>{this.state.loading ? <td>Data</td> : <td>{this.state.windSpeed}km</td>}</td>
-							<td id='hilotemps'>{this.state.loading ? <td>Data</td> : <td>{this.state.highTemp}° / {this.state.lowTemp}°</td>}</td>
+							<td id='hilotemps'>{this.state.loading ? <td>Data</td> : this.state.celsiusOn ? <td>{this.state.highTemp}° / {this.state.lowTemp} </td>: <td>{this.state.highTempF}° / {this.state.lowTempF} °</td>}</td>
 							<td>{this.state.loading ? <td>Data</td> : <td>{this.state.visibility}m</td>}</td>
                         </tr> 
                         <tr class = "attribute">
@@ -262,11 +262,11 @@ export class Mainpage extends React.Component
                 
                 <div id="d2">
                     <div id="d2sContainer">
-                        <div className='d2s'><h4>{this.state.day1}</h4><img src={this.state.day1img}></img><h4 className='d2stemp'>{this.state.day1temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day2}</h4><img src={this.state.day2img}></img><h4 className='d2stemp'>{this.state.day2temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day3}</h4><img src={this.state.day3img}></img><h4 className='d2stemp'>{this.state.day3temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day4}</h4><img src={this.state.day4img}></img><h4 className='d2stemp'>{this.state.day4temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day5}</h4><img src={this.state.day5img}></img><h4 className='d2stemp'>{this.state.day5temp}</h4></div>
+                        <div className='d2s'><h4>{this.state.day1}</h4><img src={this.state.day1img}></img><h4 className='d2stemp'>{ this.state.celsiusOn ? <h4> {this.state.day1temp} </h4> : <h4> {Math.round(this.state.day1temp*(1.8)+32)}</h4> }</h4> </div>
+                        <div className='d2s'><h4>{this.state.day2}</h4><img src={this.state.day2img}></img><h4 className='d2stemp'>{ this.state.celsiusOn ? <h4> {this.state.day2temp} </h4> : <h4> {Math.round(this.state.day2temp*(1.8)+32)}</h4> }</h4></div>
+                        <div className='d2s'><h4>{this.state.day3}</h4><img src={this.state.day3img}></img><h4 className='d2stemp'>{ this.state.celsiusOn ? <h4> {this.state.day3temp} </h4> : <h4> {Math.round(this.state.day3temp*(1.8)+32)}</h4> }</h4></div>
+                        <div className='d2s'><h4>{this.state.day4}</h4><img src={this.state.day4img}></img><h4 className='d2stemp'>{ this.state.celsiusOn ? <h4> {this.state.day4temp} </h4> : <h4> {Math.round(this.state.day4temp*(1.8)+32)}</h4> }</h4></div>
+                        <div className='d2s'><h4>{this.state.day5}</h4><img src={this.state.day5img}></img><h4 className='d2stemp'>{ this.state.celsiusOn ? <h4> {this.state.day5temp} </h4> : <h4> {Math.round(this.state.day5temp*(1.8)+32)}</h4> }</h4></div>
                     </div>
                 </div>
 
