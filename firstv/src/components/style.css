@@ -1,5 +1,4 @@
 #container{
-    display: flex;
     flex-direction: column;
     text-align: center;
     margin: 0 auto;
@@ -13,12 +12,24 @@
 .MainInfo  {
     background-color: #224ec8;
     border-radius: 5% ;
-    color: white ;
-    padding: 2%;
-    margin-bottom: 5%;
+    color: white;
+    padding: 1%;
+    margin-bottom: 4.5%;
+    margin-left: 1%;
+    margin-right: 1%;
 
+}
 
+#celsiusfahrenheitbtn {
+    margin-left: 30px;
+}
 
+#celsiusfahrenheitbtn, #postcodebtn {
+    margin-bottom: 15px;
+}
+
+#postcodebtn {
+    
 }
 
 .Location {
@@ -131,9 +142,7 @@
   position: relative;
 }
 
-#d1 {
-    margin-bottom: 15px;
-}
+
 
 #d1otherinfo {
     margin: 0 auto;
@@ -165,6 +174,16 @@
     width: 97.5%;
     margin-left: 5px;
 }
+
+#d2postcode{
+	background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
+	text-align: center;
+    border-radius: 15px;
+    height: 200px;
+    width: 97.5%;
+    margin-left: 5px;
+}
+
 #d1 h3,h4{
     text-align: left;
     margin-left: 8px;
@@ -186,20 +205,30 @@ td{
     margin: 0 auto;
 }
 
+.d2stemp {
+    position: relative;
+    left: 7px;
+}
+
 .d2s {
-    margin: 10px 10px;
+    margin: 10px 12px;
 
     float: left;
-    border: 2px solid black;
+    border: 2px solid grey;
     background-color: #cfd6ed;
     height: 95px;
     width: 30px;
-    border-radius: 15px;
+    border-radius: 25px;
     padding: 13px 15px;
 
 }
 
-
+.d2s img {
+    height: 60%;
+    width: auto;
+    position: relative;
+    left: -14px;
+}
 
 
 table,td,tr{
@@ -235,3 +264,59 @@ hr {
     margin:0 auto;
 }
 
+
+#links, #links:hover, #links:active, #links:visited{
+    align-items: center;
+    background-color: #ccdff8;
+    border: 0;
+    border-radius: 100px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    justify-content: center;
+    line-height: 20px;
+    max-width: 480px;
+    min-height: 40px;
+    min-width: 0px;
+    overflow: hidden;
+    padding: 0px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+  }
+
+button{
+  align-items: center;
+  background-color: #0A66C2;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  touch-action: manipulation;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}

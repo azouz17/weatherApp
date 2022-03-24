@@ -52,28 +52,28 @@ export class Mainpage extends React.Component
 
           day1 : null ,
           day1temp : null,
-          day1img : null ,
+          day1img : null,
 
 
           day2 : null ,
           day2temp : null,
-          day2img : null ,
+          day2img : null,
 
 
 
-          day3 : null ,
+          day3 : null,
           day3temp : null,
-          day3img : null ,
+          day3img : null,
 
 
 
-          day4 : null ,
+          day4 : null,
           day4temp : null,
-          day4img : null ,
+          day4img : null,
 
 
 
-          day5: null ,
+          day5: null,
           day5temp : null,
           day5adimg : null 
 
@@ -85,7 +85,8 @@ export class Mainpage extends React.Component
 
   async componentDidMount() {
       //const url = "https://api.openweathermap.org/data/2.5/weather?zip=W8,GB&appid=5afc51e761e2e7eaa9e64dada883952c";
-      const url = "https://api.openweathermap.org/data/2.5/forecast?q=London&appid=43980dc2ea135942958ac549b841ea53";
+      // const url = "https://api.openweathermap.org/data/2.5/forecast?q=London&appid=43980dc2ea135942958ac549b841ea53";
+      const url = "https://api.openweathermap.org/data/2.5/forecast?zip=W8,GB&appid=5afc51e761e2e7eaa9e64dada883952c";
       
       const response = await fetch(url);
       const data = await response.json();
@@ -139,7 +140,7 @@ export class Mainpage extends React.Component
 
 
       //Getting and displaying the text for the upcoming five days of the week
-        var weekday = ["Sun", "Mon", "Tues", "Wed", "Thurs", "Fri", "Sat",];
+        var weekday = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat",];
 
         //Function to get the correct integer for the index of the days array
         function CheckDay(day){
@@ -215,8 +216,10 @@ export class Mainpage extends React.Component
         return(
             <div id="container">
                 <h1>Tempthlete</h1>
-				<Link to="Postcode" className='links'>Postcode</Link>
-                <button onClick={this.handleClick.bind(this)}>Celsius/Fahrenheit</button>
+                <div id="links">
+                    <Link to="Postcode" className='links' id='postcodebtn'>Postcode</Link>
+                </div>
+				<button id='celsiusfahrenheitbtn'onClick={this.handleClick.bind(this)}>Celsius/Fahrenheit</button>
                 <br></br>
                 <div class = "MainInfo">
                     <div class="Location">
@@ -259,11 +262,11 @@ export class Mainpage extends React.Component
                 
                 <div id="d2">
                     <div id="d2sContainer">
-                        <div className='d2s'><h4>{this.state.day1}</h4><img src={this.state.day1img}></img><h4>{this.state.day1temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day2}</h4><img src={this.state.day2img}></img><h4>{this.state.day2temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day3}</h4><img src={this.state.day3img}></img><h4>{this.state.day3temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day4}</h4><img src={this.state.day4img}></img><h4>{this.state.day4temp}</h4></div>
-                        <div className='d2s'><h4>{this.state.day5}</h4><img src={this.state.day5img}></img><h4>{this.state.day5temp}</h4></div>
+                        <div className='d2s'><h4>{this.state.day1}</h4><img src={this.state.day1img}></img><h4 className='d2stemp'>{this.state.day1temp}</h4></div>
+                        <div className='d2s'><h4>{this.state.day2}</h4><img src={this.state.day2img}></img><h4 className='d2stemp'>{this.state.day2temp}</h4></div>
+                        <div className='d2s'><h4>{this.state.day3}</h4><img src={this.state.day3img}></img><h4 className='d2stemp'>{this.state.day3temp}</h4></div>
+                        <div className='d2s'><h4>{this.state.day4}</h4><img src={this.state.day4img}></img><h4 className='d2stemp'>{this.state.day4temp}</h4></div>
+                        <div className='d2s'><h4>{this.state.day5}</h4><img src={this.state.day5img}></img><h4 className='d2stemp'>{this.state.day5temp}</h4></div>
                     </div>
                 </div>
 
