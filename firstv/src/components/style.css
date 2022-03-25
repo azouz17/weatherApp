@@ -151,12 +151,13 @@
 
 #d3 {
 
-  height: 9.4em;
+  height: 9.7em;
   background-color: #224ec8;
   text-align: center;
   color: white;
   border-radius: 15px;
   margin: auto;
+  margin-bottom: 2em;
   width: 90%;
   position: relative;
 }
@@ -188,8 +189,8 @@
   text-align: center;
   border-radius: 15px;
   height: 145px;
-  width: 93.7%;
-  margin-left: 1px;
+  width: 90.7%;
+  margin-left: 20px;
 }
 
 #d2postcode {
@@ -255,11 +256,11 @@ td {
 }
 
 .d2s {
-  margin: 10px 10px;
+  margin: 10px 9px;
 
   float: left;
-  border: 2px solid grey;
-  background-color: #a3b1e0;
+  border: 2px solid rgba(128, 128, 128, 0.733);
+  background-color: #bcd5f6;
   height: 95px;
   width: 30px;
   border-radius: 25px;
@@ -298,6 +299,11 @@ input {
 }
 #perfect {
   padding-left: 50px;
+}
+
+.perfectweather {
+  position: relative;
+  left: -13px;
 }
 
 hr {

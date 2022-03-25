@@ -20,7 +20,7 @@ const FiveDayForecast = ({
 }) => (
   <div id="d2">
     <div id="d2sContainer">
-      <div className="d2s">
+      <div className="d2s" >
         <h4>{day1}</h4>
         <img src={day1img}></img>
         <h4 className="d2stemp">
