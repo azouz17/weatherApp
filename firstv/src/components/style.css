@@ -1,140 +1,116 @@
-#container{
-    flex-direction: column;
-    text-align: center;
-    margin: 0 auto;
-	font-family: Segoe UI;
-	font-weight: bold;
-    border: 2px solid black;
-    width: 454px;
-    height: 825px;
+#container {
+  flex-direction: column;
+  text-align: center;
+  margin: 0 auto;
+  font-family: Segoe UI;
+  font-weight: bold;
+  border: 2px solid black;
+  width: 454px;
+  height: 825px;
 }
 
-.MainInfo  {
-    background-color: #224ec8;
-    border-radius: 5% ;
-    color: white;
-    padding: 1%;
-    margin-bottom: 4.5%;
-    margin-left: 1%;
-    margin-right: 1%;
-
+.MainInfo {
+  background-color: #224ec8;
+  border-radius: 5%;
+  color: white;
+  padding: 1%;
+  margin-bottom: 4.5%;
+  margin-left: 1%;
+  margin-right: 1%;
 }
 
 #celsiusfahrenheitbtn {
-    margin-left: 30px;
-}
-
-#celsiusfahrenheitbtn, #postcodebtn {
-    margin-bottom: 15px;
-}
-
-#postcodebtn {
-    
+  margin-left: 30px;
 }
 
 .Location {
-    position: relative;
+  position: relative;
 }
 
 #locationCity {
-    position: relative;
-    text-align: left;
-    padding-left: 10%;
-    font-size: 140%;
-    padding-bottom: 0%;
-    margin-bottom: 0%;
-    bottom: 0%;
-
-    
+  position: relative;
+  text-align: left;
+  padding-left: 10%;
+  font-size: 140%;
+  padding-bottom: 0%;
+  margin-bottom: 0%;
+  bottom: 0%;
 }
 
 #locationTime {
-    position: absolute;
-    top: 40%;
-    padding-bottom: 10%;
-    text-align: left;
-    padding-left: 15%;
-    font-size: 100%;
-    
-    
-}
-
-
-#maintemp  {
-    display: inline-block;
-    font-size: 100%;
-}
-
-
-.weatherIcon {
-    display: inline-block;
-    position: relative;
-	width: 100%;
-	height: auto;
-}
-
-#iconDescription img {
-    filter: brightness(0) invert(1);
-    padding-right: 15em;
-    width: 30%;
-    height: auto;
-    margin-bottom: 0.4em;
-
-
-}
-#weather-caption {
-    bottom: 2em;
-    right: 7em;
-    position: relative;
-
+  position: absolute;
+  top: 40%;
+  padding-bottom: 10%;
+  text-align: left;
+  padding-left: 15%;
+  font-size: 100%;
 }
 
 #maintemp {
-    font-size: 4em;
-    position: absolute;
-    bottom: 0.5em;
-    font-size: 2.5em;
+  display: inline-block;
+  font-size: 100%;
 }
 
+.weatherIcon {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+#iconDescription img {
+  filter: brightness(0) invert(1);
+  padding-right: 15em;
+  width: 30%;
+  height: auto;
+  margin-bottom: 0.4em;
+}
+#weather-caption {
+  bottom: 2em;
+  right: 7em;
+  position: relative;
+}
+
+#maintemp {
+  font-size: 4em;
+  position: absolute;
+  bottom: 0.5em;
+  font-size: 2.5em;
+}
 
 #hilotemp span {
-    font-size: 0.7em;
-    position: absolute;
-    bottom: 2.5em;
-    
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 2.5em;
 }
-#hilotemp  {
-   right: 4em;
-    
+#hilotemp {
+  right: 4em;
 }
 
 #maintemp span {
-    font-size: 1.5em;
-    display: inline-flex;
+  font-size: 1.5em;
+  display: inline-flex;
 }
 
-.WeatherData{
-    width: 80%;
-    margin-left: 2em;
-
+.WeatherData {
+  width: 80%;
+  margin-left: 2em;
 }
 
 .data {
-    font-size: 1em;
-    
+  font-size: 1em;
 }
 .attribute td {
-    font-size: 0.6em;
+  font-size: 0.6em;
 }
 
 .attribute td {
-    font-size: 0.6em;
+  font-size: 0.6em;
 }
 
-
-
-#d1,#d3{
-  background-color: #224EC8;
+#d1,
+#d3 {
+  background-color: #224ec8;
   text-align: center;
   color: white;
   border-radius: 15px;
@@ -142,167 +118,188 @@
   position: relative;
 }
 
-
-
 #d1otherinfo {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 #d1 table {
-    margin-left: auto;
-    margin-right: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-#d1 td, #d1 tr {
-    padding-right: 20px;
+#d1 td,
+#d1 tr {
+  padding-right: 20px;
 }
-
 
 .links {
-    padding-right: 10px;
+  padding-right: 10px;
 }
 
 #d1 hr {
-    margin: 0 30px;
+  margin: 0 30px;
 }
 
-#d2{
-	background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
-	text-align: center;
-    border-radius: 15px;
-    height: 145px;
-    width: 97.5%;
-    margin-left: 5px;
+#d2 {
+  background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
+  text-align: center;
+  border-radius: 15px;
+  height: 145px;
+  width: 97.5%;
+  margin-left: 5px;
 }
 
-#d2postcode{
-	background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
-	text-align: center;
-    border-radius: 15px;
-    height: 200px;
-    width: 97.5%;
-    margin-left: 5px;
+#d2postcode {
+  background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
+  text-align: center;
+  border-radius: 15px;
+  margin: 5px 5px;
+  padding: 8px;
 }
 
-#d1 h3,h4{
-    text-align: left;
-    margin-left: 8px;
+#locationInput {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
-td{
-    margin-left: 100px;
+
+#locationInput input {
+  margin: 0;
+  margin-bottom: 8px;
+  border-radius: 15px;
+}
+
+#locationInput button {
+  margin: 0 auto;
+}
+
+#d1 h3,
+h4 {
+  text-align: left;
+  margin-left: 8px;
+}
+td {
+  margin-left: 100px;
 }
 
 #clear {
-    clear: both;
+  clear: both;
 }
 
 #d2sContainer {
-    margin: 0 auto;
-    position: relative;
+  margin: 0 auto;
+  position: relative;
 }
 
 .d2s * {
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
 .d2stemp {
-    position: relative;
-    left: 7px;
+  position: relative;
+  left: 7px;
 }
 
 .d2s {
-    margin: 10px 12px;
+  margin: 10px 12px;
 
-    float: left;
-    border: 2px solid grey;
-    background-color: #cfd6ed;
-    height: 95px;
-    width: 30px;
-    border-radius: 25px;
-    padding: 13px 15px;
-
+  float: left;
+  border: 2px solid grey;
+  background-color: #cfd6ed;
+  height: 95px;
+  width: 30px;
+  border-radius: 25px;
+  padding: 13px 15px;
 }
 
 .d2s img {
-    height: 60%;
-    width: auto;
-    position: relative;
-    left: -14px;
+  height: 60%;
+  width: auto;
+  position: relative;
+  left: -14px;
 }
 
-
-table,td,tr{
-	text-align: center;
+table,
+td,
+tr {
+  text-align: center;
 }
 
-#Postdiv{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin-top: 15%;
-    margin-left: 35%;
-    
-
+#Postdiv {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-top: 15%;
+  margin-left: 35%;
 }
 
-fieldset{
-    width: 25em;
-    height: 5em;
-    border-style: double;
-    border-color: black;
+fieldset {
+  width: 25em;
+  height: 5em;
+  border-style: double;
+  border-color: black;
 }
-label,input{
-    margin-left: 25%;
-    margin-top: 5%;
+label,
+input {
+  margin-left: 25%;
+  margin-top: 5%;
 }
-#perfect{
-    padding-left: 50px;
+#perfect {
+  padding-left: 50px;
 }
 
 hr {
-    position: relative;
-    bottom: 1.5em;
-    width:86%;
-    margin:0 auto;
+  position: relative;
+  bottom: 1.5em;
+  width: 86%;
+  margin: 0 auto;
 }
 
-
-#links, #links:hover, #links:active, #links:visited{
-    align-items: center;
-    background-color: #ccdff8;
-    border: 0;
-    border-radius: 100px;
-    box-sizing: border-box;
-    color: white;
-    cursor: pointer;
-    display: inline-flex;
-    font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    font-weight: 600;
-    justify-content: center;
-    line-height: 20px;
-    max-width: 480px;
-    min-height: 40px;
-    min-width: 0px;
-    overflow: hidden;
-    padding: 0px;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-align: center;
-    transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
-    user-select: none;
-    -webkit-user-select: none;
-    vertical-align: middle;
-  }
-
-button{
+#links {
   align-items: center;
-  background-color: #0A66C2;
+  background-color: #ccdff8;
+  border: 0;
+  border-radius: 100px;
+  box-sizing: border-box;
+  color: white;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  justify-content: center;
+  line-height: 20px;
+  max-width: 480px;
+  min-height: 40px;
+  min-width: 0px;
+  overflow: hidden;
+  padding: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+}
+
+button {
+  align-items: center;
+  background-color: #0a66c2;
   border: 0;
   border-radius: 100px;
   box-sizing: border-box;
   color: #ffffff;
   cursor: pointer;
   display: inline-flex;
-  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto, "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell, "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Lucida Grande", Helvetica, Arial, sans-serif;
+  font-family: -apple-system, system-ui, system-ui, "Segoe UI", Roboto,
+    "Helvetica Neue", "Fira Sans", Ubuntu, Oxygen, "Oxygen Sans", Cantarell,
+    "Droid Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
   justify-content: center;
@@ -316,7 +313,9 @@ button{
   padding-right: 20px;
   text-align: center;
   touch-action: manipulation;
-  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+  transition: background-color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s,
+    color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
   -webkit-user-select: none;
   vertical-align: middle;
 }
