@@ -71,10 +71,10 @@ class Mainpage extends React.Component {
 
   async componentDidMount() {
     var { location } = this.context;
-
     var url = `https://api.openweathermap.org/data/2.5/forecast?zip=${location},GB&appid=5afc51e761e2e7eaa9e64dada883952c`;
     const response = await fetch(url);
     const data = await response.json();
+
     var d = new Date();
     var date = d.toUTCString();
     console.log(data);
