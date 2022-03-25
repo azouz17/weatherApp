@@ -9,14 +9,17 @@
   height: 825px;
 }
 
+
 .MainInfo {
+  width: 90%;
   background-color: #224ec8;
-  border-radius: 5%;
+  border-radius: 10%;
   color: white;
-  padding: 1%;
-  margin-bottom: 4.5%;
-  margin-left: 1%;
-  margin-right: 1%;
+  padding: 0.5%;
+  margin: auto;
+  margin-bottom: 1em;
+  height: 21em;
+
 }
 
 #celsiusfahrenheitbtn {
@@ -44,6 +47,7 @@
   text-align: left;
   padding-left: 15%;
   font-size: 100%;
+  margin-bottom: 0;
 }
 
 #maintemp {
@@ -59,28 +63,33 @@
 }
 
 #iconDescription img {
+  position: relative;
+  bottom: 1.5em;
   padding-right: 15em;
-  width: 30%;
+  width: 40%;
   height: auto;
   margin-bottom: 0.4em;
 }
 #weather-caption {
+  font-size: 1.7em;
   bottom: 2em;
-  right: 7em;
+  right: 3.6em;
   position: relative;
 }
 
 #maintemp {
-  font-size: 4em;
+  font-size: 3.4em;
   position: absolute;
-  bottom: 0.5em;
-  font-size: 2.5em;
+  bottom: 0.9em;
+  right: 1em;
+ 
 }
 
 #hilotemp span {
-  font-size: 0.7em;
+  font-size: 0.9em;
   position: absolute;
-  bottom: 2.5em;
+  bottom: 0em;
+  top: 5em;
 }
 #hilotemp {
   right: 4em;
@@ -92,28 +101,63 @@
 }
 
 .WeatherData {
+  position: relative;
+  bottom: 3.2em;
   width: 80%;
   margin-left: 2em;
 }
 
 .data {
-  font-size: 1em;
-}
-.attribute td {
-  font-size: 0.6em;
+  font-size: 1.3em;
+  
+  
+
+  
 }
 
+
 .attribute td {
+  
+  padding-left: 2.6em;
+
   font-size: 0.6em;
+  
 }
 
-#d1,
-#d3 {
+.attribute  {
+  border-spacing: 0;
+  border-collapse: collapse;
+  
+  
+}
+#d3 h3 {
+  padding-top: 0.5em;
+}
+
+#d1 {
+  
+  padding: 0.1em;
   background-color: #224ec8;
   text-align: center;
   color: white;
   border-radius: 15px;
-  margin: 0 5px;
+  margin: auto;
+  width: 93.7%;
+  margin-top: 1em;
+  position: relative;
+
+}
+
+
+#d3 {
+
+  height: 9.4em;
+  background-color: #224ec8;
+  text-align: center;
+  color: white;
+  border-radius: 15px;
+  margin: auto;
+  width: 90%;
   position: relative;
 }
 
@@ -144,15 +188,18 @@
   text-align: center;
   border-radius: 15px;
   height: 145px;
-  width: 97.5%;
-  margin-left: 5px;
+  width: 93.7%;
+  margin-left: 1px;
 }
 
 #d2postcode {
+  width: 90%;
   background-color: #ccdff8; /* maybe cfd6ed? that is the original colour */
   text-align: center;
   border-radius: 15px;
-  margin: 5px 5px;
+  margin: auto;
+  margin-top: 1em;
+  
   padding: 8px;
 }
 
@@ -186,6 +233,13 @@ td {
   clear: both;
 }
 
+
+#day1{
+  background-color: #1429e069 ;
+  border: 2px solid #a3b1e0;;
+
+}
+
 #d2sContainer {
   margin: 0 auto;
   position: relative;
@@ -201,11 +255,11 @@ td {
 }
 
 .d2s {
-  margin: 10px 12px;
+  margin: 10px 10px;
 
   float: left;
   border: 2px solid grey;
-  background-color: #cfd6ed;
+  background-color: #a3b1e0;
   height: 95px;
   width: 30px;
   border-radius: 25px;
@@ -248,9 +302,9 @@ input {
 
 hr {
   position: relative;
-  bottom: 1.5em;
+  bottom: 3.5em;
   width: 86%;
-  margin: 0 auto;
+  
 }
 
 #links {
