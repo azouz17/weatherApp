@@ -3,6 +3,7 @@ import React from "react";
 const PerfectWeatherFor = ({ sport1, sport2, sport3 }) => (
   <div id="d3">
     <h3>Perfect weather for:</h3>
+    <div class="perfectweather">
     <table>
       <tr>
         <td id="perfect">
@@ -31,6 +32,7 @@ const PerfectWeatherFor = ({ sport1, sport2, sport3 }) => (
         </td>
       </tr>
     </table>
+    </div>
   </div>
 );
 
