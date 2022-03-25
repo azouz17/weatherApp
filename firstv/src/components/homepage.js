@@ -243,6 +243,7 @@ class Mainpage extends React.Component {
         <MainInfo
           loading={this.state.loading}
           city={this.state.city}
+          country={this.state.country}
           date={this.state.date}
           weatherIcon={this.state.weatherIcon}
           weatherDesc={this.state.weatherDesc}
