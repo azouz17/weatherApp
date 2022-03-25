@@ -19,6 +19,7 @@ import {
 } from "react-router-dom";
 import PerfectWeatherFor from "./PerfectWeatherFor";
 import FiveDayForecast from "./FiveDayForecast";
+import MainInfo from "./MainInfo";
 
 class Mainpage extends React.Component {
   static contextType = LocationContext;
@@ -239,104 +240,23 @@ class Mainpage extends React.Component {
         </nav>
 
         <br></br>
-        <div class="MainInfo">
-          <div class="Location">
-            <h3 id="locationCity">
-              {" "}
-              {this.state.loading ? (
-                <h3>Loading...</h3>
-              ) : (
-                <h3>
-                  {this.state.city}, {this.state.country}
-                </h3>
-              )}
-            </h3>
-            <h4 id="locationTime">{this.state.date}</h4>
-          </div>
-
-          <div class="weatherIcon">
-            <figure id="iconDescription">
-              <img src={this.state.weatherIcon} alt="weather icon" />
-              <figcaption id="weather-caption">
-                {this.state.weatherDesc}{" "}
-              </figcaption>
-            </figure>
-            <div>
-              <h2 id="maintemp">
-                {" "}
-                {this.state.loading ? (
-                  <h2>Data</h2>
-                ) : this.state.celsiusOn ? (
-                  <span>{this.state.feelsLikeTemp}°</span>
-                ) : (
-                  <span> {this.state.feelsLikeTempF}° </span>
-                )}{" "}
-                {this.state.celsiusOn ? <span>C</span> : <span>F</span>}
-              </h2>
-            </div>
-            <div>
-              <h2 id="hilotemp">
-                {this.state.loading ? (
-                  <span>Data</span>
-                ) : this.state.celsiusOn ? (
-                  <span>
-                    {this.state.highTemp}° / {this.state.lowTemp}°{" "}
-                  </span>
-                ) : (
-                  <span>
-                    {this.state.highTempF}° / {this.state.lowTempF}°{" "}
-                  </span>
-                )}
-              </h2>
-            </div>
-          </div>
-          <br></br>
-          <hr />
-          <table class="WeatherData">
-            <tr class="data">
-              <td>
-                {this.state.loading ? (
-                  <td>Data</td>
-                ) : (
-                  <td>{this.state.humidity}%</td>
-                )}
-              </td>
-              <td>
-                {this.state.loading ? (
-                  <td>Data</td>
-                ) : (
-                  <td>{this.state.windSpeed}km</td>
-                )}
-              </td>
-              <td id="hilotemps">
-                {this.state.loading ? (
-                  <td>Data</td>
-                ) : this.state.celsiusOn ? (
-                  <td>
-                    {this.state.highTemp}° / {this.state.lowTemp}°{" "}
-                  </td>
-                ) : (
-                  <td>
-                    {this.state.highTempF}° / {this.state.lowTempF}°{" "}
-                  </td>
-                )}
-              </td>
-              <td>
-                {this.state.loading ? (
-                  <td>Data</td>
-                ) : (
-                  <td>{this.state.visibility}m</td>
-                )}
-              </td>
-            </tr>
-            <tr class="attribute">
-              <td>Humidity</td>
-              <td>Wind speed</td>
-              <td>Hi/Lo Temp</td>
-              <td>Visibility</td>
-            </tr>
-          </table>
-        </div>
+        <MainInfo
+          loading={this.state.loading}
+          city={this.state.city}
+          date={this.state.date}
+          weatherIcon={this.state.weatherIcon}
+          weatherDesc={this.state.weatherDesc}
+          celsiusOn={this.state.celsiusOn}
+          feelsLikeTemp={this.state.feelsLikeTemp}
+          feelsLikeTempF={this.state.feelsLikeTempF}
+          highTemp={this.state.highTemp}
+          highTempF={this.state.highTempF}
+          lowTemp={this.state.lowTemp}
+          lowTempF={this.state.lowTempF}
+          humidity={this.state.humidity}
+          windSpeed={this.state.windSpeed}
+          visibility={this.state.visibility}
+        />
 
         <FiveDayForecast
           celsiusOn={this.state.celsiusOn}
